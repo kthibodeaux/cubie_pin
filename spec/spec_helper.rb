@@ -1,0 +1,1 @@
+require 'cubie_pin'
