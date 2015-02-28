@@ -13,7 +13,7 @@ module CubiePin
     end
 
     def off
-
+      raise CanNotOperateOnDisabledPinError unless enabled?
     end
 
     def enabled?
