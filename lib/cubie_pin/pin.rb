@@ -16,6 +16,21 @@ module CubiePin
       raise CanNotOperateOnDisabledPinError unless enabled?
     end
 
+    def off?
+      raise CanNotOperateOnDisabledPinError unless enabled?
+      ! on?
+    end
+
+    def on?
+      raise CanNotOperateOnDisabledPinError unless enabled?
+      read == '1'
+    end
+
+    def read
+      raise CanNotOperateOnDisabledPinError unless enabled?
+
+    end
+
     def enabled?
       @enabled == true
     end

@@ -82,21 +82,32 @@ describe Pin do
 
   describe '#on?' do
     context 'the pin is disabled' do
-      xit 'raises an error' do
+      it 'raises an error' do
+        pin = Pin.new(:pin => 1, :direction => :out)
+        allow(pin).to receive(:enabled?).and_return(false)
 
+        expect { pin.on? }.to raise_error(CanNotOperateOnDisabledPinError)
       end
     end
 
     context 'the pin is enabled' do
       context 'the pins value is 1' do
-        xit 'returns true' do
+        it 'returns true' do
+          pin = Pin.new(:pin => 1, :direction => :out)
+          allow(pin).to receive(:read).and_return('1')
+          allow(pin).to receive(:enabled?).and_return(true)
 
+          expect(pin.on?).to eq(true)
         end
       end
 
       context 'the pins value is 0' do
-        xit 'returns false' do
+        it 'returns false' do
+          pin = Pin.new(:pin => 1, :direction => :out)
+          allow(pin).to receive(:read).and_return('0')
+          allow(pin).to receive(:enabled?).and_return(true)
 
+          expect(pin.on?).to eq(false)
         end
       end
     end
@@ -104,21 +115,32 @@ describe Pin do
 
   describe '#off?' do
     context 'the pin is disabled' do
-      xit 'raises an error' do
+      it 'raises an error' do
+        pin = Pin.new(:pin => 1, :direction => :out)
+        allow(pin).to receive(:enabled?).and_return(false)
 
+        expect { pin.off? }.to raise_error(CanNotOperateOnDisabledPinError)
       end
     end
 
     context 'the pin is enabled' do
       context 'the pins value is 1' do
-        xit 'returns false' do
+        it 'returns false' do
+          pin = Pin.new(:pin => 1, :direction => :out)
+          allow(pin).to receive(:read).and_return('1')
+          allow(pin).to receive(:enabled?).and_return(true)
 
+          expect(pin.off?).to eq(false)
         end
       end
 
       context 'the pins value is 0' do
-        xit 'returns true' do
+        it 'returns true' do
+          pin = Pin.new(:pin => 1, :direction => :out)
+          allow(pin).to receive(:read).and_return('0')
+          allow(pin).to receive(:enabled?).and_return(true)
 
+          expect(pin.off?).to eq(true)
         end
       end
     end
@@ -126,8 +148,11 @@ describe Pin do
 
   describe '#read' do
     context 'the pin is disabled' do
-      xit 'raises an error' do
+      it 'raises an error' do
+        pin = Pin.new(:pin => 1, :direction => :out)
+        allow(pin).to receive(:enabled?).and_return(false)
 
+        expect { pin.read }.to raise_error(CanNotOperateOnDisabledPinError)
       end
     end
 
