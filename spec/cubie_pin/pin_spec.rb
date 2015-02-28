@@ -54,8 +54,11 @@ describe Pin do
 
   describe '#off' do
     context 'the pin is disabled' do
-      xit 'raises and error' do
+      it 'raises and error' do
+        pin = Pin.new(:pin => 1, :direction => :out)
+        allow(pin).to receive(:enabled?).and_return(false)
 
+        expect { pin.off }.to raise_error(CanNotOperateOnDisabledPinError)
       end
     end
 

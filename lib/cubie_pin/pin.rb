@@ -12,6 +12,10 @@ module CubiePin
       raise CanNotOperateOnDisabledPinError unless enabled?
     end
 
+    def off
+
+    end
+
     def enabled?
       @enabled == true
     end
