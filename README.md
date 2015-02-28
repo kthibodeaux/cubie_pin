@@ -45,18 +45,17 @@ Modify the value:
 ```ruby
 # on and off will raise an exception if called on an input pin
 # will raise an exception is the pin has been disabled
-pin.on # Turns the pin on and caches the value as 1
-pin.off # Turns the pin off and caches the value as 0
+pin.on # Turns the pin on
+pin.off # Turns the pin off
 ```
 
 Read the current value of the pin:
 
 ```ruby
 # will raise an exception is the pin has been disabled
-pin.read # Reads the value from the pin and caches it
-pin.value # Returns the cached value of the pin
-pin.on? # Returns true if the cached value is 1, false otherwise
-pin.off? # Returns true if the cached value is 0, false otherwise
+pin.read # Reads the value from the pin and
+pin.on? # Returns true if the value of read is 1, false otherwise
+pin.off? # Returns true if the value of read is 0, false otherwise
 ```
 
 Disable the pin:
