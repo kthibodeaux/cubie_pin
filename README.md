@@ -4,6 +4,9 @@ Control GPIO pins on a [CubieBoard 2](http://cubieboard.org/2013/06/19/cubieboar
 
 This is a work in progress and may contain bugs and incomplete features.
 
+For a list of the pins you can use visit the [GPIO Introduction page](https://github.com/cubieplayer/Cubian/wiki/GPIO-Introduction)
+of the Cubian wiki.
+
 ## Installation
 
 If you do not have Ruby you can install 1.9.3 on Cubian by running:
@@ -32,6 +35,8 @@ To enable a pin for output:
 ```ruby
 # :pin and :direction are required, an exception will be raised if they are not
 # passed
+
+# Pin 61 is physical pin 48 on the side of the board with the SATA port
 pin = CubiePin::Pin.new(:pin => 61, :direction => :out)
 ```
 
