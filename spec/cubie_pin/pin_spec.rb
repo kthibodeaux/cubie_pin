@@ -36,11 +36,11 @@ describe Pin do
 
     context 'the pin is enabled' do
       context 'the pin is an output pin' do
-        it 'turns the pin on' do
+        xit 'turns the pin on' do
 
         end
 
-        it 'returns the pin object' do
+        xit 'returns the pin object' do
 
         end
       end
@@ -54,18 +54,18 @@ describe Pin do
 
   describe '#off' do
     context 'the pin is disabled' do
-      it 'raises and error' do
+      xit 'raises and error' do
 
       end
     end
 
     context 'the pin is enabled' do
       context 'the pin is an output pin' do
-        it 'turns the pin off' do
+        xit 'turns the pin off' do
 
         end
 
-        it 'returns the pin object' do
+        xit 'returns the pin object' do
 
         end
       end
@@ -79,20 +79,20 @@ describe Pin do
 
   describe '#on?' do
     context 'the pin is disabled' do
-      it 'raises an error' do
+      xit 'raises an error' do
 
       end
     end
 
     context 'the pin is enabled' do
       context 'the pins value is 1' do
-        it 'returns true' do
+        xit 'returns true' do
 
         end
       end
 
       context 'the pins value is 0' do
-        it 'returns false' do
+        xit 'returns false' do
 
         end
       end
@@ -101,20 +101,20 @@ describe Pin do
 
   describe '#off?' do
     context 'the pin is disabled' do
-      it 'raises an error' do
+      xit 'raises an error' do
 
       end
     end
 
     context 'the pin is enabled' do
       context 'the pins value is 1' do
-        it 'returns false' do
+        xit 'returns false' do
 
         end
       end
 
       context 'the pins value is 0' do
-        it 'returns true' do
+        xit 'returns true' do
 
         end
       end
@@ -123,13 +123,13 @@ describe Pin do
 
   describe '#read' do
     context 'the pin is disabled' do
-      it 'raises an error' do
+      xit 'raises an error' do
 
       end
     end
 
     context 'the pin is enabled' do
-      it 'returns the value of the pin' do
+      xit 'returns the value of the pin' do
 
       end
     end
@@ -137,49 +137,49 @@ describe Pin do
 
   describe '#enable' do
     context 'the pin is enabled' do
-      it 'does nothing' do
+      xit 'does nothing' do
 
       end
     end
 
     context 'the pin is disabled' do
-      it 'enables the pin' do
+      xit 'enables the pin' do
 
       end
     end
 
-    it 'returns the pin object' do
+    xit 'returns the pin object' do
 
     end
   end
 
   describe '#disable' do
     context 'the pin is disabled' do
-      it 'does nothing' do
+      xit 'does nothing' do
 
       end
     end
 
     context 'the pin is enabled' do
-      it 'disables the pin' do
+      xit 'disables the pin' do
 
       end
     end
 
-    it 'returns the pin object' do
+    xit 'returns the pin object' do
 
     end
   end
 
   describe 'enabled?' do
     context 'the pin is enabled' do
-      it 'returns true' do
+      xit 'returns true' do
 
       end
     end
 
     context 'the pin is not enabled' do
-      it 'returns false' do
+      xit 'returns false' do
 
       end
     end
@@ -187,13 +187,13 @@ describe Pin do
 
   describe 'disabled?' do
     context 'the pin is disabled' do
-      it 'returns true' do
+      xit 'returns true' do
 
       end
     end
 
     context 'the pin is not disabled' do
-      it 'returns false' do
+      xit 'returns false' do
 
       end
     end
